@@ -19,6 +19,11 @@ function addTask() {
   renderTasks();
   document.getElementById('task').value = '';
 }
+function clearTasks() {
+  tasks = [];
+  localStorage.removeItem('tasks');
+  renderTasks();
+}
 
 function deleteTask(index) {
   tasks.splice(index, 1);
